@@ -1,0 +1,12 @@
+Cara unmarshal
+
+Cara 1.edit filenya,tambahkan "from uncompyle6.main import decompile
+from sysy import stdout
+import marshal",lalu ganti exec nya jadi x,dah kurung buka jadi =,dan hapus kurung tutup di akhir satu aja,kmudian paling bawah tulis" decompile(2.7, x, stdout)",kalau python 3.7 ya tinggal ubah 2.7 jadi 3.7,lalu jalanin di termux dengan perintah"python2 namafile.py",kalau ingin disimpan tambahkan > namafile jadi "python2 namafile.py > hasil.py", bedanya marshal python2 sama python3,kan ada tulisan marshal.loads(c'kode marshal'),nah kalau python3 huruf c nya huruf b,jadi bukan huruf c.
+
+
+Cara 2.kalau menggunakan cara yang pertama jadinya malah jadi angka,maka di file 3.py ganti d sama k nya saja,ganti sama angka2 tadi,kalau masih jadi angka,maka ulangi proses tadi sampai jadi.
+
+
+
+Cara 3.kalau tidak bisa dengan cara di atas,sekarang edit file 1.py,ganti e nya pake kode marshal yang tadi,yang di antara tanda kutip('),*nb:pertama file nya rename dulu jadi pyc,lalu buka termux,ketik " uncompyle6 filetadi.pyc > hasil.py,setelah barulah bisa copy kode marshal nya,stelah di paste di <e = 'sini' >,maka jalankan di termux,ketik "python2 1.py > 1 dis", lalu jalanin get.py dengan " python2 get.py 1.dis",lalu cari file dat.py,lalu copy d dan k nya,lalu paste di file 2.py,lalu jalanin("python2 2.py > 2.dis"),lalu jalanin lagi get.py dengan perintah "python2 get.py 2.dis", lalu ganti d dan k di 3.py dengan d dan k yang ada di dat.py yang barusan.
